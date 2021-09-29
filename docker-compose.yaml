@@ -1,0 +1,38 @@
+version: "3"
+services: 
+  frontend: 
+    container_name: frontend 
+    image: sharansripada/fe_n
+    ports: 
+     - "8080:80"
+    
+  jobservice: 
+    image: sharansripada/job_n
+    ports: 
+     - "5000:8082"
+    depends_on: 
+      - postgresql 
+    environment: 
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1234
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  postgresql:
+    image: postgres
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=postgres
+    
+  organizationservice: 
+    image: sharansripada/org_n
+    ports: 
+      - "5001:8081" 
+    depends_on:
+      - postgresql 
+    environment: 
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1234
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update

@@ -1,0 +1,9 @@
+com/greencommute/jobservice/rest/JobPostControllerTest.java
+ com.greencommute.jobservice.rest.JobPostControllerTest
+com/greencommute/jobservice/service/impl/JobPostServiceImplTest.java
+ com.greencommute.jobservice.service.impl.JobPostServiceImplTest
+ com.greencommute.jobservice.service.impl.JobPostServiceImplTest$1
+ com.greencommute.jobservice.service.impl.JobPostServiceImplTest$2
+ com.greencommute.jobservice.service.impl.JobPostServiceImplTest$3
+ com.greencommute.jobservice.service.impl.JobPostServiceImplTest$4
+ com.greencommute.jobservice.service.impl.JobPostServiceImplTest$JobPostServiceImplTestContextConfiguration

@@ -1,0 +1,62 @@
+{
+  "organization": [
+    {
+      "id": "84a44e44-d9af-48f2-9785-95967bcadc6f",
+      "name": "BMW",
+      "logoUrl": "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-2.png",
+      "description": "BMW company",
+      "websiteUrl": "https://www.bmw.in/en/index.html",
+      "addresses": [
+        {
+          "id": "e0b3e487-3c27-48d7-85e1-de91c76240e7",
+          "addressLine1": "6-3-569, Khairatabad Rd, opp. RTA Office, Somajiguda",
+          "addressLine2": "",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "country": "India",
+          "zipcode": "500082",
+          "location": "17.3850-78.4867"
+        },
+        {
+          "id": "e0b3e487-3c27-48d7-85e1-de91c76240e8",
+          "addressLine1": "6-3-569, Khairatabad Rd, opp. RTA Office, Somajiguda",
+          "addressLine2": "",
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "country": "India",
+          "zipcode": "500082",
+          "location": "17.3850-78.4867"
+        }
+      ]
+    },
+    {
+      "id": "84a44e44-d9af-48f2-9785-95967bcadc6e",
+      "name": "HP",
+      "logoUrl": "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-2.png",
+      "description": "HP company",
+      "websiteUrl": "https://www.bmw.in/en/index.html",
+      "addresses": [
+        {
+          "id": "e0b3e487-3c27-48d7-85e1-de91c76240e7",
+          "addressLine1": "6-3-569, Khairatabad11111 Rd, opp. RTA Office, Somajiguda",
+          "addressLine2": "",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "country": "India",
+          "zipcode": "500082",
+          "location": "17.3850-78.4867"
+        },
+        {
+          "id": "e0b3e487-3c27-48d7-85e1-de91c76240e8",
+          "addressLine1": "6-3-569, Khairatabad222222 Rd, opp. RTA Office, Somajiguda",
+          "addressLine2": "",
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "country": "India",
+          "zipcode": "500082",
+          "location": "17.3850-78.4867"
+        }
+      ]
+    }
+  ]
+}
