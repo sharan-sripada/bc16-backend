@@ -62,10 +62,7 @@ pipeline{
             sh 'docker build -t sharansripada/job_jenkins:latest jobsService/'
             sh 'docker images'
             
-        }}
-	     
-	            
-	        
+        }}  
 	    }
 	    
 	   stage('Push Docker'){
