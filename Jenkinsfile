@@ -55,8 +55,7 @@ pipeline{
 	            
 	    }}
 	    stage('Build Docker'){
-          
-        steps{
+            steps{
             container('docker'){
 
             sh 'docker build -t sharansripada/org_jenkins:latest organizationService/'
