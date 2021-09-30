@@ -55,8 +55,7 @@ pipeline{
 	            
 	    }}
 	    stage('Build Docker'){
-         
-         
+          
         steps{
             container('docker'){
 
