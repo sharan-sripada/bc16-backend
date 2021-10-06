@@ -1,12 +1,12 @@
 import groovy.transform.Field
 
-podTemplate(label: 'bc16', containers: [
+podTemplate( containers: [
 	containerTemplate(name: 'docker', image: 'docker:19.03', command: 'cat', ttyEnabled: true),
 	containerTemplate(name: 'java', image: 'adoptopenjdk/openjdk11', command: 'cat', ttyEnabled: true) ],
 	volumes: [hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')]
 )
 	{
-		node('bc16'){
+		node(POD_LABEL){
     environment {
         docker_image=""
         DOCKERHUB_CREDENTIALS= credentials('dockerhub_token_sss')
