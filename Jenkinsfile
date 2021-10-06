@@ -13,11 +13,7 @@ podTemplate(label: 'bc16', containers: [
         MY_KUBECONFIG = credentials('config-file')
     }
 
-     withEnv([
-        "VERSION=${env.BUILD_NUMBER}",
-
-
-    ]){
+     
 
 	    stage('Checkout Source') {
       
@@ -39,8 +35,8 @@ podTemplate(label: 'bc16', containers: [
             
             container('docker'){
 
-            sh 'docker build -t sharansripada/org_jenkins:${VERSION} organizationService/'
-            sh 'docker build -t sharansripada/job_jenkins:${VERSION} jobsService/'
+            sh "docker build -t sharansripada/org_jenkins:${BUILD_NUMBER} organizationService/"
+            sh "docker build -t sharansripada/job_jenkins:${BUILD_NUMBER} jobsService/"
             sh 'docker images'
             
         }
@@ -53,8 +49,8 @@ podTemplate(label: 'bc16', containers: [
 
 	          sh 'docker login -u $username -p $password'
 	            //sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-	            sh 'docker push sharansripada/org_jenkins:${VERSION}'
-	            sh 'docker push sharansripada/job_jenkins:${VERSION}'
+	            sh "docker push sharansripada/org_jenkins:${BUILD_NUMBER}"
+	            sh "docker push sharansripada/job_jenkins:${BUILD_NUMBER}"
 	           
 	        }
               }
@@ -65,5 +61,5 @@ podTemplate(label: 'bc16', containers: [
 	    }  
                     
 				
-	}    
+
     }}
