@@ -10,7 +10,7 @@ podTemplate(label: 'bc16', containers: [
     environment {
         docker_image=""
         DOCKERHUB_CREDENTIALS= credentials('dockerhub_token_sss')
-        MY_KUBECONFIG = credentials('config-file')
+       
     }
 
      
