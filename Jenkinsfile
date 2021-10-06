@@ -11,7 +11,7 @@ podTemplate(label: 'bc16', containers: [
         docker_image=""
         DOCKERHUB_CREDENTIALS= credentials('dockerhub_token_sss')
        
-    }
+    }	
 
      
 
@@ -35,8 +35,10 @@ podTemplate(label: 'bc16', containers: [
             
             container('docker'){
 
-            sh "docker build -t sharansripada/org_jenkins:${BUILD_NUMBER} organizationService/"
-            sh "docker build -t sharansripada/job_jenkins:${BUILD_NUMBER} jobsService/"
+            sh "docker build -t sharansripada/org_jenkins:latest organizationService/"
+            sh "docker build -t sharansripada/job_jenkins:latest jobsService/"
+			sh "docker tag sharansripada/job_jenkins:latest sharansripada/job_jenkins:${BUILD_NUMBER}"
+			sh "docker tag sharansripada/org_jenkins:latest sharansripada/org_jenkins:${BUILD_NUMBER}"
             sh 'docker images'
             
         }
@@ -50,7 +52,9 @@ podTemplate(label: 'bc16', containers: [
 	          sh 'docker login -u $username -p $password'
 	            //sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 	            sh "docker push sharansripada/org_jenkins:${BUILD_NUMBER}"
+				sh "docker push sharansripada/org_jenkins:latest"
 	            sh "docker push sharansripada/job_jenkins:${BUILD_NUMBER}"
+				sh "docker push sharansripada/job_jenkins:latest"
 	           
 	        }
               }
